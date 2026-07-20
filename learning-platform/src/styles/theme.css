@@ -1,0 +1,32 @@
+:root {
+    --bg: #0F172A;
+    --surface: #1E293B;
+    --surface-soft: rgba(30, 41, 59, 0.72);
+    --primary: #2563EB;
+    --secondary: #F59E0B;
+    --text: #F8FAFC;
+    --muted: #CBD5E1;
+    --shadow-soft: 0 24px 64px rgba(15, 23, 42, 0.24);
+    --radius: 1.25rem;
+    --radius-sm: 0.9rem;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.container-glow {
+    box-shadow: var(--shadow-soft);
+}
