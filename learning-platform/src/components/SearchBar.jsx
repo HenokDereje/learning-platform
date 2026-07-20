@@ -6,6 +6,7 @@ function SearchBar({ value, onChange, placeholder = 'Search courses, skills, top
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
+                aria-label={placeholder}
                 className="w-full bg-transparent border-none text-text outline-none placeholder:text-muted"
             />
         </div>

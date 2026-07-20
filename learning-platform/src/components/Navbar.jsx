@@ -16,12 +16,12 @@ function Navbar() {
 
     useEffect(() => {
         const onScroll = () => setIsSticky(window.scrollY > 24)
-        window.addEventListener('scroll', onScroll)
+        window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
     return (
-        <header className={`fixed inset-x-0 z-40 transition-all duration-500 ${isSticky ? 'bg-surface/95 backdrop-blur-xl shadow-soft' : 'bg-transparent'}`}>
+        <header className={`fixed inset-x-0 z-40 transition-all duration-500 ${isSticky ? 'bg-gradient-to-r from-indigo-700/95 via-violet-700/90 to-cyan-600/90 shadow-2xl shadow-indigo-950/30 backdrop-blur-xl ring-1 ring-white/10' : 'bg-transparent'}`}>
             <div className="container mx-auto flex items-center justify-between gap-6 px-6 py-4 lg:px-8">
                 <div className="flex items-center gap-4">
                     <div className="rounded-2xl bg-primary/10 px-3 py-2 text-primary shadow-glow">
@@ -39,29 +39,30 @@ function Navbar() {
                             key={item.path}
                             to={item.path}
                             className={({ isActive }) =>
-                                `text-sm font-medium transition duration-300 ${isActive ? 'text-white' : 'text-muted hover:text-white'
-                                }`
+                                `text-sm font-medium transition duration-300 ${isActive ? 'text-white' : 'text-muted hover:text-white'}`
                             }
                         >
-                            <motion.span whileHover={{ y: -2 }}>
-                                {item.label}
-                            </motion.span>
+                            <motion.span whileHover={{ y: -2 }}>{item.label}</motion.span>
                         </NavLink>
                     ))}
                 </nav>
 
                 <div className="hidden items-center gap-3 md:flex">
-                    <button className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-muted transition hover:border-primary/50 hover:text-primary">
+                    <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-white/80 transition hover:border-white/30 hover:bg-white/15 hover:text-white">
                         <FiSearch size={18} />
                     </button>
-                    <button className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-muted transition hover:border-secondary/50 hover:text-secondary">
+                    <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/20 bg-white/10 text-white/80 transition hover:border-white/30 hover:bg-white/15 hover:text-white">
                         <FiBell size={18} />
                     </button>
-                    <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-dark transition hover:bg-surface">Login</button>
-                    <button className="rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-dark transition hover:bg-amber-400">Register</button>
+                    <NavLink to="/login" className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20">
+                        Login
+                    </NavLink>
+                    <NavLink to="/register" className="rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">
+                        Register
+                    </NavLink>
                 </div>
 
-                <button className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-muted md:hidden" onClick={() => setIsOpen((value) => !value)}>
+                <button type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-muted md:hidden" onClick={() => setIsOpen((value) => !value)}>
                     {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
                 </button>
             </div>
@@ -75,8 +76,7 @@ function Navbar() {
                                 to={item.path}
                                 onClick={() => setIsOpen(false)}
                                 className={({ isActive }) =>
-                                    `text-sm font-semibold transition ${isActive ? 'text-white' : 'text-muted hover:text-white'
-                                    }`
+                                    `text-sm font-semibold transition ${isActive ? 'text-white' : 'text-muted hover:text-white'}`
                                 }
                             >
                                 {item.label}
@@ -84,8 +84,12 @@ function Navbar() {
                         ))}
                     </div>
                     <div className="mt-6 flex flex-col gap-3">
-                        <button className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-dark">Login</button>
-                        <button className="rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-dark">Register</button>
+                        <NavLink to="/login" className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-dark text-center">
+                            Login
+                        </NavLink>
+                        <NavLink to="/register" className="rounded-full bg-secondary px-4 py-2 text-sm font-semibold text-dark text-center">
+                            Register
+                        </NavLink>
                     </div>
                 </motion.div>
             )}

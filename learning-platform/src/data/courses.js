@@ -1,0 +1,192 @@
+export const courses = [
+    {
+        id: 'design-essentials',
+        title: 'Design Essentials for Product Teams',
+        category: 'Design',
+        difficulty: 'Beginner',
+        price: 79,
+        priceLabel: '$79',
+        duration: '7h 30m',
+        rating: 4.8,
+        students: '18.4k',
+        instructor: {
+            name: 'Maya Lee',
+            title: 'Lead Product Designer',
+            bio: 'Maya helps teams build polished product experiences with user-first design systems.',
+        },
+        description: 'Learn how to design modern digital products with confidence. This course covers visual systems, interaction patterns, and collaborative design workflows.',
+        summary: 'Build polished product experiences using modern design principles and collaborative workflows.',
+        curriculum: [
+            {
+                title: 'Introduction',
+                lessons: ['Design mindset', 'Structure of a design system', 'Project kickoff'],
+            },
+            {
+                title: 'Visual Design',
+                lessons: ['Color systems', 'Typography and hierarchy', 'Design tokens'],
+            },
+            {
+                title: 'Interaction Design',
+                lessons: ['Motion principles', 'Microinteractions', 'Accessibility'],
+            },
+        ],
+        requirements: ['Basic computer skills', 'Curiosity for digital design', 'No prior design experience required'],
+        reviews: [
+            { name: 'Caleb Morris', rating: 5, comment: 'Amazing content and very practical exercises.' },
+            { name: 'Lina Ortiz', rating: 5, comment: 'The course helped our team ship better interfaces faster.' },
+        ],
+        related: ['web-dev-masterclass', 'marketing-growth-plan'],
+    },
+    {
+        id: 'web-dev-masterclass',
+        title: 'Full-stack Web Development Masterclass',
+        category: 'Development',
+        difficulty: 'Intermediate',
+        price: 129,
+        priceLabel: '$129',
+        duration: '12h 15m',
+        rating: 4.9,
+        students: '23.1k',
+        instructor: {
+            name: 'Aiden Cole',
+            title: 'Software Architect',
+            bio: 'Aiden builds scalable apps and teaches teams to ship production-ready products.',
+        },
+        description: 'Master full-stack development with JavaScript, React, and backend fundamentals. Build real-world applications from scratch.',
+        summary: 'Deliver modern web applications using a complete JavaScript stack and practical architecture patterns.',
+        curriculum: [
+            {
+                title: 'Frontend Foundations',
+                lessons: ['React fundamentals', 'Component architecture', 'State management'],
+            },
+            {
+                title: 'Backend Essentials',
+                lessons: ['API design', 'Database models', 'Authentication'],
+            },
+            {
+                title: 'Deployment',
+                lessons: ['Hosting strategies', 'CI/CD basics', 'Performance optimization'],
+            },
+        ],
+        requirements: ['Familiarity with HTML/CSS', 'Basic JavaScript knowledge', 'Eager to build production apps'],
+        reviews: [
+            { name: 'Noah Bennett', rating: 5, comment: 'A complete roadmap that helped me level up quickly.' },
+            { name: 'Sara Diaz', rating: 4, comment: 'Excellent course with strong real-world examples.' },
+        ],
+        related: ['ai-product-leadership', 'design-essentials'],
+    },
+    {
+        id: 'marketing-growth-plan',
+        title: 'Growth Marketing & Analytics',
+        category: 'Marketing',
+        difficulty: 'Intermediate',
+        price: 99,
+        priceLabel: '$99',
+        duration: '6h 45m',
+        rating: 4.7,
+        students: '14.8k',
+        instructor: {
+            name: 'Nina Patel',
+            title: 'Marketing Strategist',
+            bio: 'Nina helps brands grow with data-driven campaigns and audience-first strategy.',
+        },
+        description: 'Learn how to grow your brand with conversion-focused campaigns, analytics, and messaging frameworks.',
+        summary: 'Drive measurable growth through strategy, analytics, and modern marketing systems.',
+        curriculum: [
+            {
+                title: 'Growth Fundamentals',
+                lessons: ['Audience mapping', 'Content strategy', 'Measurement plans'],
+            },
+            {
+                title: 'Campaign Execution',
+                lessons: ['Paid media basics', 'Organic growth tactics', 'Email workflows'],
+            },
+            {
+                title: 'Optimization',
+                lessons: ['A/B testing', 'Funnel analysis', 'Growth reporting'],
+            },
+        ],
+        requirements: ['Understanding of digital marketing basics', 'Access to analytics tools', 'Interest in data-driven growth'],
+        reviews: [
+            { name: 'Priya Sharma', rating: 5, comment: 'The frameworks in this course are extremely useful.' },
+            { name: 'James Park', rating: 4, comment: 'Great balance of strategy and tactical advice.' },
+        ],
+        related: ['design-essentials', 'web-dev-masterclass'],
+    },
+    {
+        id: 'data-insights',
+        title: 'Data Insights for Business Leaders',
+        category: 'Data Science',
+        difficulty: 'Advanced',
+        price: 149,
+        priceLabel: '$149',
+        duration: '9h 20m',
+        rating: 4.8,
+        students: '9.7k',
+        instructor: {
+            name: 'Olivia Chen',
+            title: 'Data Science Lead',
+            bio: 'Olivia helps leaders use data to make smarter decisions and build analytics-driven teams.',
+        },
+        description: 'Gain the skills to interpret data, build business analytics dashboards, and champion data-informed decisions.',
+        summary: 'Turn data into business impact through modern analytics and visual storytelling.',
+        curriculum: [
+            {
+                title: 'Data Thinking',
+                lessons: ['Data literacy', 'Stakeholder alignment', 'Outcome mapping'],
+            },
+            {
+                title: 'Analytics Workflow',
+                lessons: ['Data preparation', 'Dashboard design', 'Storytelling with data'],
+            },
+            {
+                title: 'Decision Intelligence',
+                lessons: ['Model interpretation', 'Experiment design', 'Governance basics'],
+            },
+        ],
+        requirements: ['Comfort with spreadsheets', 'Curiosity for data', 'Access to analytics tools'],
+        reviews: [
+            { name: 'Mia Gonzales', rating: 5, comment: 'A practical course for any business leader working with data.' },
+            { name: 'Ethan Reed', rating: 4, comment: 'Well-structured and easy to follow.' },
+        ],
+        related: ['web-dev-masterclass', 'marketing-growth-plan'],
+    },
+    {
+        id: 'ai-product-leadership',
+        title: 'AI Product Leadership',
+        category: 'Business',
+        difficulty: 'Advanced',
+        price: 179,
+        priceLabel: '$179',
+        duration: '10h 00m',
+        rating: 4.9,
+        students: '7.1k',
+        instructor: {
+            name: 'Jordan Hayes',
+            title: 'Product Leader',
+            bio: 'Jordan trains teams to build AI-enabled products with ethical strategy and modern process.',
+        },
+        description: 'Learn to lead AI product initiatives, align stakeholders, and ship responsible machine learning solutions.',
+        summary: 'Manage AI product development with clarity and sustainable business value.',
+        curriculum: [
+            {
+                title: 'AI Strategy',
+                lessons: ['Opportunity discovery', 'Ethical frameworks', 'Roadmap alignment'],
+            },
+            {
+                title: 'Product Operations',
+                lessons: ['Data readiness', 'Cross-functional delivery', 'Metrics and tracking'],
+            },
+            {
+                title: 'Launch',
+                lessons: ['Go-to-market planning', 'Post-launch monitoring', 'Scaling AI products'],
+            },
+        ],
+        requirements: ['Product experience', 'Interest in AI strategy', 'Leadership mindset'],
+        reviews: [
+            { name: 'Anya Foster', rating: 5, comment: 'Essential course for modern product teams.' },
+            { name: 'Derek Lin', rating: 4, comment: 'Strong frameworks and real-world guidance.' },
+        ],
+        related: ['design-essentials', 'data-insights'],
+    },
+]
